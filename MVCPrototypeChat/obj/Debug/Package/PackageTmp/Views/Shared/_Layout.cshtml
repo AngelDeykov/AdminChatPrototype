@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ASP.NET Chat Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Web Solutions", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                @Html.Partial("LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+            <!-- Start WOWSlider.com BODY section -->
+            <div id="wowslider-container1">
+                <div class="ws_images">
+                    <ul>
+                        <li><img src="@Url.Content("~/Content/Images/1.jpg")" alt="1" title="1" id="wows1_0" /></li>
+                        <li><img src="@Url.Content("~/Content/Images/2.jpg")" alt="2" title="2" id="wows1_1" /></li>
+                        <li><img src="@Url.Content("~/Content/Images/3.jpg")" alt="3" title="3" id="wows1_2" /></li>
+                        <li><img src="@Url.Content("~/Content/Images/4.jpg")" alt="4" title="4" id="wows1_3" /></li>
+                        <li><img src="@Url.Content("~/Content/Images/7.jpg")" alt="7" title="7" id="wows1_5" /></li>
+                    </ul>
+                </div>
+                <div class="ws_shadow"></div>
+            </div>
+            <!-- End WOWSlider.com BODY section -->
+        <hr />
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Angel Deykov Bachelor Project Prototype</p>
+        </footer>
+    </div>
+    <div id="chatLink">
+        @Html.ActionLink("Live Chat Support", "", "", new { onclick = "javascript:openInNewWindowWithSettings();" })
+        @Html.Hidden("chatUrl", Url.Action("Chat", "Chat"))
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/wowslider")
+    @Scripts.Render("~/bundles/script") 
+    @Scripts.Render("~/bundles/flip") 
+    @Scripts.Render("~/bundles/custom")     
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="MVCPrototypeChat" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\school\\work\\MVCPrototypeChat-final\ -\ Copy\\MVCPrototypeChat\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\school\\work\\MVCPrototypeChat-final\ -\ Copy\\MVCPrototypeChat\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="AppContext-Web.config Connection String" description="" value="Data Source=bg\sqlexpress; initial catalog=Chat; integrated security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\school\\work\\MVCPrototypeChat-final\ -\ Copy\\MVCPrototypeChat\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AppContext']/@connectionString" />
+  </parameter>
+</parameters>

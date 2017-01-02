@@ -1,0 +1,153 @@
+﻿@{
+    ViewBag.Title = "Unautenticated User Chat";
+    Layout = "~/Views/Shared/_ChatLayout.cshtml";
+}
+
+<div class="usersChat">
+    <h3>Unautenticated User Chat</h3>
+    <div id="unauthUsrName">
+        <div class="form-horizontal">
+        <form name="myForm">
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label for="txtMessage">Provide an email adress:</label>
+                    <input id="txtUserName" name="email" class="form-control" type="text" /><br />                  
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input id="unAuthConnect" class="btn btn-default" type="button" value="Connect to chat" />
+                </div>
+            </div>
+            <div id="alarm" class="text-danger"></div>
+            </form>
+        </div> @*end div authentication*@
+    </div>@*end div chat*@
+
+    <div id="divChat" class="divChatHide">
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <div id="divMessage" class="msgDiv"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label class="welcome" for="txtMessage"></label>
+                    <input id="txtMessage" class="form-control" type="text" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input id="btnSendMessage" type="button" class="btn btn-default" value="Send" />
+                </div>
+            </div>
+        </div>@*end div form-horizontal*@
+
+        <input id="hUserId" type="hidden" />
+        <input id="hId" type="hidden" />
+        <input id="hUserName" type="hidden" />
+        <input id="hGroup" type="hidden" />
+    </div>@*end div chat*@
+</div>@*end div usersChat*@
+
+ @section scripts {
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+        <script src="~/signalr/hubs" type="text/javascript"></script>
+        <script type="text/javascript">
+            
+            $(function () {
+                var objHub = $.connection.chatHub;
+                loadClientMethods(objHub);
+                $.connection.hub.start().done(function () {
+                    loadEvents(objHub);
+                });
+            });
+
+            function loadEvents(objHub) {
+                //disallow user to refresh the chat window
+                function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+                $(document).on("keydown", disableF5);
+
+                //check if the email is valid if yes call unAuthConnect()
+                //on the server and pass userName as parameter
+                $("#unAuthConnect").click(function () {
+                    var newname = $("#txtUserName").val();
+                    var x = document.forms["myForm"]["email"].value;
+                    var atpos = x.indexOf("@@");
+                    var dotpos = x.lastIndexOf(".");
+                    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {                   
+                        var errorMsg = $('<p>Email adress is not valid!</p>');
+                        $('#alarm').prepend(errorMsg);
+                        $(errorMsg).fadeIn(900).delay(1000).fadeOut(900);
+                        return false;
+                    }
+                    else {
+                        objHub.server.unAuthConnect(newname);
+                    }
+                });
+
+                //when we click the btnSendMessage we check if there is input
+                //if yes call sendMessageToGroup() on the server and pass
+                //the values from the fields as parameters
+                $('#btnSendMessage').click(function () {
+                    var msg = $("#txtMessage").val();
+                    if (msg.length > 0) {
+                        var userName = $('#hUserName').val();
+                        objHub.server.sendMessageToGroup(userName, msg);
+                    }
+                });
+
+                window.onbeforeunload = function () {
+                    var name = document.getElementById('hUserName').value;
+                    objHub.server.testEvent(name);
+                }
+
+                //hit Enter key == $('#btnSendMessage').click();
+                $("#txtMessage").keypress(function (e) {
+                    if (e.which == 13) {
+                        $('#btnSendMessage').click();
+                    }
+                });
+            }
+
+            function loadClientMethods(objHub) {
+
+                //recieved call from the server if admin is not avaiable
+                //show reconnect btn and append warning msg
+                objHub.client.NoExistAdmin = function (userName) {
+                    var errorMsg = $('<p>There is no Admin avaiable. Please try again later.</p>');
+                    $('#alarm').prepend(errorMsg);
+                    $(errorMsg).fadeIn(900).delay(2000).fadeOut(900);
+                }
+
+                //recieved call from the server append message and username
+                objHub.client.getMessages = function (userName, message) {
+                    $("#txtMessage").val('');
+                    $('#divMessage').append('<div><p><small><b>' + userName + '</b></small>: ' + message + '</p></div>');
+                    var height = $('#divMessage')[0].scrollHeight;
+                    $('#divMessage').scrollTop(height);
+                }
+
+                //recieved call from the server we populate our hidden 
+                //fields with the parameters passed by the server
+                //append div welcome and the userName
+                //hide the div for providing Email and show the chat div
+                objHub.client.onConnected = function (id, userName, UserID, userGroup) {
+                    $("#unauthUsrName").hide();
+                    $('.divChatHide').removeClass('divChatHide');
+                    $('.welcome').append('<div><p>Welcome: ' + userName + '</p></div>');
+                    $('#hId').val(id);
+                    $('#hUserId').val(UserID);
+                    $('#hUserName').val(userName);
+                    $('#hGroup').val(userGroup);
+                }
+            }
+        </script>
+    }@*end scripts section*@

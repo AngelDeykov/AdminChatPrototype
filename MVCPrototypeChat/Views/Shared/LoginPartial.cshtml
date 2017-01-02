@@ -1,0 +1,15 @@
+﻿<ul class="nav navbar-nav navbar-right">
+
+    @if (User.Identity.IsAuthenticated)
+    {
+       <li class="nav-username">@Html.Encode("Hello " + User.Identity.Name)</li>
+       <li>@Html.ActionLink("Log Out", "Logout", "Authentication")</li>
+    }
+    else
+    {
+       <li>@Html.ActionLink("Register", "Register", "Authentication")</li>
+       <li>@Html.ActionLink("Log In", "Login", "Authentication")</li>
+    }
+
+</ul>
+

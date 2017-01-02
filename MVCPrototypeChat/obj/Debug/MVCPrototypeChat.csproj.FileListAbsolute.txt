@@ -1,0 +1,168 @@
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\csc.exe
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\System.Collections.Immutable.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\System.Reflection.Metadata.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\vbc.exe
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\VBCSCompiler.exe
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\roslyn\VBCSCompiler.exe.config
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\MVCPrototypeChat.dll.config
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\MVCPrototypeChat.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\MVCPrototypeChat.pdb
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Antlr3.Runtime.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.Web.Infrastructure.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Newtonsoft.Json.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Helpers.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Mvc.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Optimization.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Razor.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.WebPages.Deployment.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.WebPages.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.WebPages.Razor.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\WebGrease.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Helpers.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Mvc.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Optimization.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.Razor.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.WebPages.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.WebPages.Deployment.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\System.Web.WebPages.Razor.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Antlr3.Runtime.pdb
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Newtonsoft.Json.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.csprojResolveAssemblyReference.cache
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.pdb
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\EntityFramework.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\EntityFramework.SqlServer.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.Owin.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.Owin.Security.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Owin.dll
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\EntityFramework.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\EntityFramework.SqlServer.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.Owin.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\Microsoft.Owin.Security.xml
+E:\school\work\MVCPrototypeChat\MVCPrototypeChat\bin\SimpleCrypto.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\csc.exe
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\System.Collections.Immutable.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\System.Reflection.Metadata.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\vbc.exe
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\VBCSCompiler.exe
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\roslyn\VBCSCompiler.exe.config
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\MVCPrototypeChat.dll.config
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\MVCPrototypeChat.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\MVCPrototypeChat.pdb
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Antlr3.Runtime.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\EntityFramework.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\EntityFramework.SqlServer.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.Owin.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.Owin.Security.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.Web.Infrastructure.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Newtonsoft.Json.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Owin.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\SimpleCrypto.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Helpers.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Mvc.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Optimization.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Razor.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.WebPages.Deployment.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.WebPages.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.WebPages.Razor.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\WebGrease.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\EntityFramework.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\EntityFramework.SqlServer.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.Owin.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Microsoft.Owin.Security.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Helpers.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Mvc.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Optimization.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.Razor.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.WebPages.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.WebPages.Deployment.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\System.Web.WebPages.Razor.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Antlr3.Runtime.pdb
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\bin\Newtonsoft.Json.xml
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.csprojResolveAssemblyReference.cache
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.dll
+E:\school\work\MVCPrototypeChat-final\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.pdb
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\csc.exe
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\System.Collections.Immutable.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\System.Reflection.Metadata.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\vbc.exe
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\VBCSCompiler.exe
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\roslyn\VBCSCompiler.exe.config
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\MVCPrototypeChat.dll.config
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\MVCPrototypeChat.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\MVCPrototypeChat.pdb
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Antlr3.Runtime.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\EntityFramework.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\EntityFramework.SqlServer.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.Owin.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.Owin.Security.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.Web.Infrastructure.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Newtonsoft.Json.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Owin.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\SimpleCrypto.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Helpers.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Mvc.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Optimization.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Razor.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.WebPages.Deployment.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.WebPages.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.WebPages.Razor.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\WebGrease.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\EntityFramework.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\EntityFramework.SqlServer.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.Owin.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Microsoft.Owin.Security.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Helpers.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Mvc.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Optimization.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.Razor.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.WebPages.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.WebPages.Deployment.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\System.Web.WebPages.Razor.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Antlr3.Runtime.pdb
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\bin\Newtonsoft.Json.xml
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.csprojResolveAssemblyReference.cache
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.dll
+E:\school\work\MVCPrototypeChat-final - Copy\MVCPrototypeChat\obj\Debug\MVCPrototypeChat.pdb

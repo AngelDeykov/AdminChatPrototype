@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Unautenticated User Chat";
+    Layout = "~/Views/Shared/_ChatLayout.cshtml";
+}
+
+<div class="usersChat">
+    <h3>Unautenticated User Chat</h3>
+    <div id="unauthUsrName">
+        <div class="form-horizontal">
+        <form name="myForm">
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label for="txtMessage">Provide an email adress:</label>
+                    <input id="txtUserName" name="email" class="form-control" type="text" /><br />                  
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input id="unAuthConnect" class="btn btn-default" type="button" value="Connect to chat" />
+                </div>
+            </div>
+            <div id="alarm" class="text-danger"></div>
+            </form>
+        </div> @*end div authentication*@
+    </div>@*end div chat*@
+
+    <div id="divChat" class="divChatHide">
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <div id="divMessage" class="msgDiv"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <label class="welcome" for="txtMessage"></label>
+                    <input id="txtMessage" class="form-control" type="text" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input id="btnSendMessage" type="button" class="btn btn-default" value="Send" />
+                </div>
+            </div>
+        </div>@*end div form-horizontal*@
+
+        <input id="hUserId" type="hidden" />
+        <input id="hId" type="hidden" />
+        <input id="hUserName" type="hidden" />
+        <input id="hGroup" type="hidden" />
+    </div>@*end div chat*@
+</div>@*end div usersChat*@
+
+ @section scripts {
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+        <script src="~/signalr/hubs" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            $(function () {
+                //$("#divChat").hide();
+                var objHub = $.connection.chatHub;
+                loadClientMethods(objHub);
+                $.connection.hub.start().done(function () {
+                    loadEvents(objHub);
+                });
+            });
+
+            function loadEvents(objHub) {
+
+                function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+                $(document).on("keydown", disableF5);
+
+
+                $("#unAuthConnect").click(function () {
+                    var newname = $("#txtUserName").val();
+                    var x = document.forms["myForm"]["email"].value;
+                    var atpos = x.indexOf("@@");
+                    var dotpos = x.lastIndexOf(".");
+                    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                        // <<<<<-- ***** Return to Server [  Connect  ] *****
+                        var errorMsg = $('<p>Email adress is not valid!</p>');
+                        $('#alarm').prepend(errorMsg);
+                        $(errorMsg).fadeIn(900).delay(1000).fadeOut(900);
+                        return false;
+                    }
+                    else {
+                        objHub.server.unAuthConnect(newname);
+                    }
+                });
+
+                $('#btnSendMessage').click(function () {
+                    var msg = $("#txtMessage").val();
+                    if (msg.length > 0) {
+                        var userName = $('#hUserName').val();
+                        // <<<<<-- ***** Return to Server [  SendMessageToGroup  ] *****
+                        objHub.server.sendMessageToGroup(userName, msg);
+                    }
+                });
+
+                $("#txtMessage").keypress(function (e) {
+                    if (e.which == 13) {
+                        $('#btnSendMessage').click();
+                    }
+                });
+            }
+
+            function loadClientMethods(objHub) {
+
+                objHub.client.NoExistAdmin = function (userName) {
+                    var errorMsg = $('<p>There is no Admin avaiable. Please try again later.</p>');
+                    $('#alarm').prepend(errorMsg);
+                    $(errorMsg).fadeIn(900).delay(2000).fadeOut(900);
+                }
+
+                objHub.client.getMessages = function (userName, message) {
+                    $("#txtMessage").val('');
+                    $('#divMessage').append('<div><p><small><b>' + userName + '</b></small>: ' + message + '</p></div>');
+                    var height = $('#divMessage')[0].scrollHeight;
+                    $('#divMessage').scrollTop(height);
+                }
+
+                objHub.client.onConnected = function (id, userName, UserID, userGroup) {
+                    $("#unauthUsrName").hide();
+                    $('.divChatHide').removeClass('divChatHide');
+                    $('.welcome').append('<div><p>Welcome: ' + userName + '</p></div>');
+                    $('#hId').val(id);
+                    $('#hUserId').val(UserID);
+                    $('#hUserName').val(userName);
+                    $('#hGroup').val(userGroup);
+                }
+            }
+        </script>
+    }@*end scripts section*@

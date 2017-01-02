@@ -1,0 +1,202 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 950px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#waitingUsrsList{
+    position:relative;
+    float:right;
+    width:200px;
+    height:400px;
+    background-color:transparent;
+    overflow-y:scroll;
+    display:block;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+}
+
+#waitingUsrsList h4{
+    text-align:center;
+}
+
+.waitingUsrs{
+    position:relative;
+    left:0px;
+    text-align:left;
+    margin: 0; 
+    padding: 0;
+}
+
+.waitingUsrs li{
+    text-decoration:none;
+    list-style-type:none;
+    border-top: 1px solid;
+    border-bottom:1px solid;
+    border-color:#cccccc;
+    margin: 0; 
+    padding: 5px;
+    left:0px;
+    list-style-position:outside;
+    text-align:left;
+}
+
+.adminChat{
+    width:auto;
+    position:fixed;
+    top:0px;
+    left:0px;
+    padding:0px;
+    margin:20px;
+    border-bottom:1px solid #cccccc;
+}
+
+.adminChatSection{
+    width:300px;
+    display:block;
+    float:right;
+}
+
+.adminChat h3{
+    text-align:center;
+}
+
+.usersChat{
+    width:450px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    padding:0px;
+    margin-left:40px;
+}
+
+.usersChat h3{
+    text-align:center;
+}
+
+.nav-username{
+  color: #eeeeee;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  position: relative;
+  line-height: 20px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.msgDiv{
+    height:200px;
+    overflow-y:scroll;
+    display: block;
+    width: 100%;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    font-size: 14px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius:4px;
+}
+
+#alarm{
+    max-height:34px;
+}
+
+.flip {
+    height: 199px;
+    width: 300px;
+    margin: 0 auto;
+}
+.flip img {
+    width: 300px;
+    height: auto;
+}
+.flip .back {
+    background: #2184cd;
+    color: #fff;
+    text-align: center;
+}
+
+.flip .back p{
+    padding:3px;
+}
+
+#chatLink{
+    position:fixed;
+    bottom: 0px;
+    right: 5px;
+    width:auto;
+    height:auto;
+    z-index: 1000;
+    background: #fac695; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fac695 0%, #f5ab66 15%, #ed7504 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #fac695 0%,#f5ab66 15%,#ed7504 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #fac695 0%,#f5ab66 15%,#ed7504 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac695', endColorstr='#ed7504',GradientType=0 ); /* IE6-9 */
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#chatLink p {
+    margin:0;
+    position:relative;
+    padding:8px 20px;
+    font-size:18px;
+    color:#ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#chatLink:hover{
+    cursor:pointer;
+}
+
+.divChatHide{
+    display:none;
+}
+
+#divChat.divChatHide{
+    display:none;
+}
+
+#divChat{
+    display:block;
+}
+
+.btnHide{
+    display:none;
+}
+
+#reconnectBtn.btnHide{
+    display:none;
+}
+
+#reconnectBtn{
+    display:block;
+}
