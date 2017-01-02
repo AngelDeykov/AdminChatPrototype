@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - ASP.NET Chat Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,51 +16,37 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Web Solutions", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li><a href='javascript:openInNewWindowWithSettings();'>Chat</a></li>
                     </ul>
                 @Html.Partial("LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
+
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Angel Deykov Bachelor Project Prototype</p>
         </footer>
     </div>
-
+    <div id="chatLink" onclick="javascript:openInNewWindowWithSettings();">
+        @*@Html.ActionLink("Live Chat Support", "", "", new { onclick = "javascript:openInNewWindowWithSettings();" })*@
+        @Html.Hidden("chatUrl", Url.Action("Chat", "Chat"))
+        <p>Live Chat Support</p>
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-       
-    <script>
-        function openInNewWindowWithSettings() {
-            myWin = window.open('@Url.Content("~/Chat/Chat")', target = '_blank', 'width = 400, height = 600, top = 50, left= 50');
-            myWindow.resizeTo(400, 600);                           // Resizes the new window
-            myWindow.focus();
-            //options:
-            //fullscreen = 'yes',
-            //height = '800px',
-            //left = '20px',
-            //location = 'no', //address field 
-            //menubar = 'no',
-            //resizeable = 'yes',
-            //scrollbars = 'yes',
-            //status = 'yes', //status bar
-            //titlebar = 'yes',
-            //toolbar = 'yes',
-            //top = '20px', 
-            //width = '1000px'
-
-        }
-    </script>
+    @Scripts.Render("~/bundles/wowslider")
+    @Scripts.Render("~/bundles/script") 
+    @Scripts.Render("~/bundles/flip") 
+    @Scripts.Render("~/bundles/custom")     
     @RenderSection("scripts", required: false)
 </body>
 </html>

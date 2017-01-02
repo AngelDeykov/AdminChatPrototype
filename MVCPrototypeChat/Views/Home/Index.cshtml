@@ -1,31 +1,64 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@Html.Partial("SliderPartial")
+<h2>Web Solution Ltd.</h2>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<p><b> Web Solutions Ltd.</b> is a small, fairly new organisation in web-development 
+    and web-design related service companies industry, located in Copenhagen, Denmark.
+    Our doors have been opened since 2016 and till present date we can brag with slow, 
+    but constant growth. We strive to To provide web-related services that go above and 
+    beyond the expectations of our customers at a fair and reasonable price.</p>
 
+<p>Web development and internet marketing is an industry where 
+    companies prey on those who lack knowledge on the subject by making 
+    their work seem more necessary and complex than it actually is. At <b> Web
+     Solutions Ltd. </b>, we strive to strike down this stereotype by conducting business honestly 
+    and explaining everything to our clients that they would like to know.</p>
+
+<h3>Our Expertise</h3>
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <div class="flip">
+            <div class="front">
+                <img src="@Url.Content("~/Content/Images/development.jpg")" alt="development image" />
+            </div>
+            <div class="back">
+                <h3>Web Development</h3>
+                <p>We specialize in developing W3C standards
+                 compliant websites that are compatible with the latest devices. A group of
+                 developers are dedicated to creating powerful,
+                 effective and engaging websites. Our ultra-clean,
+                 standards-based markup code produce websites that increased conversions and superior visitor loyalty.</p>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <div class="flip">
+            <div class="front">
+                <img src="@Url.Content("~/Content/Images/design.jpg")" alt="design image" />
+            </div>
+            <div class="back">
+                <h3>Web Design</h3>
+                <p>We work with you to develop a user experience which delivers value to your audience. 
+                Value means repeat visits and referrals via social media and other channels. Using our 
+                years of experience our web design and development solutions 
+                are customized to help you achieve your digital marketing goals.</p>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <div class="flip">
+            <div class="front">
+                <img src="@Url.Content("~/Content/Images/seo.jpg")" alt="seo image" />
+            </div>
+            <div class="back">
+                <h3>Search Engine Optimization</h3>
+                <p>The SEO team’s accomplishments are as remarkable as they are diverse:
+                 from taking small stores to local domination, to aiding global brands to
+                 fend off fierce competition. Our success comes from our diversity: computer
+                 developers, literature gurus, graphic designers provide our clients with a plethora of talents</p>
+            </div>
+        </div>
     </div>
 </div>

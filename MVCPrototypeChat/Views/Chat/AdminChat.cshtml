@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Admin Chat";
+    Layout = "~/Views/Shared/_ChatLayout.cshtml";
+}
+<div class="adminChat">
+    <h3>Admin Chat</h3>
+    <div id="waitingUsrsList"><h4>Users in queue</h4><ul class="waitingUsrs"></ul></div>
+
+    <div class="form-horizontal adminChatSection">
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div id="divMessage" class="msgDiv"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <p><b>Welcome: @HttpContext.Current.User.Identity.Name<b/></p>
+                <input id="txtMessage" class="form-control" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input id="btnSendMessage" class="btn btn-default" type="button" value="Send" />
+            </div>
+        </div>
+
+        <input id="hUserId" type="hidden" />
+        <input id="hId" type="hidden" />
+        <input id="hUserName" type="hidden" />
+        <input id="hGroup" type="hidden" />
+    </div>@*end div form-horizontal*@
+</div>@*end div usersChat*@
+    @section scripts {
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.signalR-2.2.1.min.js"></script>
+        <script src="~/signalr/hubs" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            $(function () {
+                var objHub = $.connection.chatHub;
+                loadClientMethods(objHub);
+                $.connection.hub.start().done(function () {
+                    loadEvents(objHub);
+                });
+            });
+
+            function loadEvents(objHub) {
+                //call connect() on the server and pass userName as parameter
+                var name = '@HttpContext.Current.User.Identity.Name';
+                objHub.server.connect(name);
+                //disallow user to refresh the chat window
+                function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+                $(document).on("keydown", disableF5);
+
+                //when we click the btnSendMessage we check if there is input
+                //if yes call sendMessageToGroup() on the server and pass
+                //the values from the fields as parameters
+                $('#btnSendMessage').click(function () {
+                    var msg = $("#txtMessage").val();
+                    if (msg.length > 0) {
+                        var username = $('#hUserName').val();
+                        document.getElementById('txtMessage').value = "";
+                        objHub.server.sendMessageToGroup(username, msg);
+                    }
+                });
+
+                //hit Enter key == $('#btnSendMessage').click();
+                $("#txtMessage").keypress(function (e) {
+                    if (e.which == 13) {
+                        $('#btnSendMessage').click();
+                    }
+                });
+            }
+
+            function loadClientMethods(objHub) {
+                //recieved call from the server append message and username
+                objHub.client.getMessages = function (userName, message) {
+                    $('#txtMessage').val('');
+                    $('#divMessage').append('<div><p><small><b>' + userName + '</b></small>: ' + message + '</p></div>');
+                    var height = $('#divMessage')[0].scrollHeight;
+                    $('#divMessage').scrollTop(height);
+                }
+
+                //recieved call from the server add user who is trying to connect
+                //to the ul waitingUsrs ("Users in queue") as a new list element and
+                //asign the userName as id of this list element
+                objHub.client.UpdateWaitingUsrList = function (userName) {
+                    var li = $('<li>' + userName + '</li>');
+                    li.attr('id', userName);
+                    $('.waitingUsrs').append(li);
+                    var height = $('.waitingUsrs')[0].scrollHeight;
+                    $('.waitingUsrs').scrollTop(height);
+                }
+
+                //recieved call from the server find element with
+                //id == to the userName and remove it
+                objHub.client.RemoveWaitingUser = function (userName) {
+                    document.getElementById(userName).remove();
+                }
+
+                //recieved call from the server we populate our hidden 
+                //fields with the parameters passed by the server
+                objHub.client.onConnected = function (id, userName, UserID, userGroup) {
+                    $('#hId').val(id);
+                    $('#hUserId').val(UserID);
+                    $('#hUserName').val(userName);
+                    $('#hGroup').val(userGroup);
+                }
+            }
+        </script>
+    }@*end scripts section*@
+

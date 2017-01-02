@@ -24,11 +24,21 @@ namespace MVCPrototypeChat
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/custom").Include(
-                   "~/Scripts/custom.js"));
+                      "~/Scripts/custom.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/script").Include(
+                     "~/Scripts/script.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/wowslider").Include(
+                     "~/Scripts/wowslider.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/flip").Include(
+                     "~/Scripts/flip.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/style.css"));
         }
     }
 }

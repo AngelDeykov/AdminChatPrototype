@@ -12,23 +12,25 @@ namespace MVCPrototypeChat.Controllers
         // GET: Chat
         public ActionResult Chat()
         {
-                return View();
-        }
-
-        [ChildActionOnly]
-        public PartialViewResult AuthenticatedUsersChat()
-        {
-            AppContext db = new AppContext();
-            User user = db.Users.Single(usr => usr.Email == User.Identity.Name);
-            int isAdmin = user.AdminCode;
-            if (isAdmin == 0)
+            if (User.Identity.IsAuthenticated)
             {
-                return PartialView("_UserChatPartial");
+                AppContext db = new AppContext();
+                User user = db.Users.Single(usr => usr.Email == User.Identity.Name);
+                int isAdmin = user.AdminCode;
+                if (isAdmin == 0)
+                {
+                    return View("UserChat");
+                }
+                else
+                {
+                    return View("AdminChat");
+                }
             }
             else
             {
-                return PartialView("_AdminChatPartial");
+                return View("UnauthUserChat");
             }
+
         }
     }
 }
